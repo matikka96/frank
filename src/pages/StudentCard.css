@@ -1,0 +1,61 @@
+.student-card-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.student-card {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.student-card-picture {
+  position: relative;
+}
+.student-card-icon-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.student-card-icon-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.pulse {
+  border-radius: 50%;
+  box-shadow: 0 0 0 yellow;
+  animation: pulse 1.5s infinite;
+}
+.pulse:hover {
+  animation: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 yellow;
+    transform: scale(1);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 20px rgba(204, 169, 44, 0);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    transform: scale(1);
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 yellow;
+    transform: scale(1);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(204, 169, 44, 0);
+    transform: scale(0.8);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    transform: scale(1);
+  }
+}
