@@ -1,6 +1,6 @@
 import { Redirect, Route } from "react-router-dom";
 import { IonApp, IonIcon, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs } from "@ionic/react";
-import { IonReactRouter } from "@ionic/react-router";
+import { IonReactHashRouter } from "@ionic/react-router";
 import {
   compassOutline,
   menuOutline,
@@ -10,6 +10,7 @@ import {
 } from "ionicons/icons";
 import StudentCard from "./pages/StudentCard";
 import Profile from "./pages/Profile";
+import VerifyCard from "./pages/VerifyCard";
 import useProfile from "./hooks/useProfile";
 
 /* Core CSS required for Ionic components to work properly */
@@ -31,31 +32,33 @@ import "@ionic/react/css/display.css";
 /* Theme variables */
 import "./theme/variables.css";
 import "./theme/global.css";
-import ProfileType from "./types/profile";
 
 export default function App() {
   const [profile, setProfile] = useProfile();
 
   return (
     <IonApp>
-      <IonReactRouter>
+      <IonReactHashRouter>
         <IonTabs>
           <IonRouterOutlet>
-            <Route path="/student-card">
+            <Route exact path="/card">
               <StudentCard profile={profile} />
+            </Route>
+            <Route exact path="/card/verify">
+              <VerifyCard />
             </Route>
             <Route path="/profile">
               <Profile profile={profile} setProfile={setProfile} />
             </Route>
             <Route exact path="/">
-              <Redirect to="/student-card" />
+              <Redirect to="/card" />
             </Route>
           </IonRouterOutlet>
           <IonTabBar slot="bottom">
             <IonTabButton disabled={true}>
               <IonIcon icon={compassOutline} />
             </IonTabButton>
-            <IonTabButton tab="student-card" href="/student-card">
+            <IonTabButton tab="card" href="/card">
               <IonIcon icon={idCardOutline} />
             </IonTabButton>
             <IonTabButton disabled={true}>
@@ -69,7 +72,7 @@ export default function App() {
             </IonTabButton>
           </IonTabBar>
         </IonTabs>
-      </IonReactRouter>
+      </IonReactHashRouter>
     </IonApp>
   );
 }

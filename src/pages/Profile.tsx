@@ -16,7 +16,6 @@ import {
 } from "@ionic/react";
 import { cloudUploadOutline } from "ionicons/icons";
 import "./Profile.css";
-// import Profile from "../types/profile";
 
 interface Props {
   profile: any;

@@ -3,14 +3,10 @@
   justify-content: center;
 }
 .student-card {
-  max-width: 800px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
-.student-card-picture {
-  position: relative;
-}
+
 .student-card-icon-left {
   position: absolute;
   bottom: 0;
@@ -29,6 +25,11 @@
 }
 .pulse:hover {
   animation: none;
+}
+.force-square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 
 @-webkit-keyframes pulse {

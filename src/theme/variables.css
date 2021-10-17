@@ -1,23 +1,26 @@
+/* Importing font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
 /* Ionic Variables and Theming. For more info, please see:
 http://ionicframework.com/docs/theming/ */
 
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #E74277;
+  --ion-color-primary: hsla(341, 77%, 58%, 1);
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #3171e0;
-  --ion-color-primary-tint: #4c8dff;
+  --ion-color-primary-shade: hsla(341, 77%, 68%, 1);
+  --ion-color-primary-tint: hsla(341, 77%, 68%, 1);
 
   /** secondary **/
-  --ion-color-secondary: #6396dc;
+  --ion-color-secondary: hsla(219, 62%, 56%, 1);
   --ion-color-secondary-rgb: 61, 194, 255;
   --ion-color-secondary-contrast: #ffffff;
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
-  --ion-color-secondary-shade: #36abe0;
-  --ion-color-secondary-tint: #50c8ff;
+  --ion-color-secondary-shade: hsla(219, 62%, 66%, 1);
+  --ion-color-secondary-tint: hsla(219, 62%, 66%, 1);
 
   /** tertiary **/
   --ion-color-tertiary: #5260ff;
@@ -81,7 +84,6 @@ http://ionicframework.com/docs/theming/ */
  */
 
 @media (prefers-color-scheme: dark) {
-
   /* body {
     --ion-color-primary: #428cff;
     --ion-color-primary-rgb: 66,140,255;
@@ -189,7 +191,6 @@ http://ionicframework.com/docs/theming/ */
     --ion-toolbar-background: var(--ion-color-step-150);
     --ion-toolbar-border-color: var(--ion-color-step-250);
   } */
-
 
   /*
    * Material Design Dark Theme

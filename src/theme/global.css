@@ -1,4 +1,7 @@
 /* Text */
+* {
+  font-family: "Montserrat";
+}
 .text-center {
   text-align: center;
 }
@@ -8,8 +11,27 @@
 .text-15 {
   font-size: 1.5rem;
 }
+.text-30 {
+  font-size: 3rem;
+}
+.text-slim {
+  font-weight: 300;
+}
+.text-regular {
+  font-weight: 500;
+}
+.text-bold {
+  font-weight: 600;
+}
+.text-upper-capitalize {
+  text-transform: capitalize;
+}
 
 /* Margin & padding */
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+}
 .p-1 {
   padding: 1rem;
 }
@@ -71,6 +93,18 @@
   margin-bottom: 1.75rem;
 }
 
+/* Border */
+.border {
+  border: 0.2rem solid white;
+}
+.border-rounded {
+  border-radius: 0.75rem;
+}
+
+/* Colors */
 .bg-grey {
   background-color: lightgrey;
+}
+.color-lightgrey {
+  color: lightgrey;
 }

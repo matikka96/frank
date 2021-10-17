@@ -6,9 +6,13 @@ import {
   IonFabButton,
   IonCard,
   IonCardTitle,
+  IonCardSubtitle,
   IonCardContent,
   IonCardHeader,
   IonButton,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
 } from "@ionic/react";
 import { useIonRouter } from "@ionic/react";
 import { barcodeOutline, checkmarkOutline } from "ionicons/icons";
@@ -27,24 +31,23 @@ export default function StudentCard({ profile }: Props) {
 
   return (
     <IonPage>
-      <IonContent scrollY={true} fullscreen color="secondary">
+      <IonHeader className="ion-no-border">
+        <IonToolbar mode="ios" color="secondary">
+          <IonTitle className="text-10 text-regular ">OPISKELIJAKORTTI</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent fullscreen color="secondary">
         {userInfoIsValid() ? (
-          <div className="student-card-wrapper px-2">
+          <div className="container px-2 pb-2">
             <div className="student-card">
-              <IonText color="light">
-                <h1 className="text-center text-10">OPISKELIJAKORTTI</h1>
-              </IonText>
-              <div className="student-card-picture" style={{ marginTop: "-1.5rem" }}>
-                <img
-                  className="p-2"
-                  src={profile.picture}
+              <div style={{ position: "relative" }}>
+                <div
+                  className="force-square mx-2 mb-2"
                   style={{
-                    height: "calc(100vw - 4rem)",
-                    width: "calc(100vw - 4rem)",
-                    objectFit: "cover",
-                  }}
-                  alt="student picture"
-                />
+                    backgroundImage: `url(${profile.picture})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center center",
+                  }}></div>
                 <IonFabButton
                   className="student-card-icon-left"
                   style={{ pointerEvents: "none" }}
@@ -53,19 +56,19 @@ export default function StudentCard({ profile }: Props) {
                 </IonFabButton>
                 <IonFabButton
                   className="student-card-icon-right pulse"
-                  style={{ pointerEvents: "none" }}
-                  color="light">
+                  color="light"
+                  onClick={() => router.push("/card/verify")}>
                   <IonIcon size="large" icon={checkmarkOutline} />
                 </IonFabButton>
               </div>
-              <IonText color="light mb-1">
+              <IonText color="light mb-1 color-lightgrey">
                 <section className="pt-1">
-                  <div className="text-15">{profile.firstName}</div>
-                  <div className="text-15">{profile.lastName}</div>
+                  <div className="text-15 text-upper-capitalize">{profile.firstName}</div>
+                  <div className="text-15 text-upper-capitalize">{profile.lastName}</div>
                   <div>{profile.birthDate.split("-").join(".")}</div>
                 </section>
                 <section className="pt-1">
-                  <div>{profile.university}</div>
+                  <div text-upper-capitalize>{profile.university}</div>
                 </section>
                 <section className="pt-1">
                   <div>Korkeakouluopiskelija</div>
@@ -76,8 +79,9 @@ export default function StudentCard({ profile }: Props) {
         ) : (
           <IonCard>
             <IonCardHeader>
-              {/* <IonCardSubtitle>Card Subtitle</IonCardSubtitle> */}
-              <IonCardTitle>Syötä omat tiedot niin opiskelijakorttisi tulee näkyviin</IonCardTitle>
+              <IonCardSubtitle>
+                Syötä omat tiedot niin opiskelijakorttisi tulee näkyviin
+              </IonCardSubtitle>
             </IonCardHeader>
             <IonCardContent>
               <IonButton onClick={() => router.push("/profile")}>Syötä tiedot</IonButton>
