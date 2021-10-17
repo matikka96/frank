@@ -5,7 +5,6 @@ import {
   IonText,
   IonFabButton,
   IonCard,
-  IonCardTitle,
   IonCardSubtitle,
   IonCardContent,
   IonCardHeader,
@@ -38,7 +37,7 @@ export default function StudentCard({ profile }: Props) {
       </IonHeader>
       <IonContent fullscreen color="secondary">
         {userInfoIsValid() ? (
-          <div className="container px-2 pb-2">
+          <div className="container px-2">
             <div className="student-card">
               <div style={{ position: "relative" }}>
                 <div
@@ -68,10 +67,10 @@ export default function StudentCard({ profile }: Props) {
                   <div>{profile.birthDate.split("-").join(".")}</div>
                 </section>
                 <section className="pt-1">
-                  <div text-upper-capitalize>{profile.university}</div>
+                  <div className="text-upper-capitalize">{profile.university}</div>
                 </section>
                 <section className="pt-1">
-                  <div>Korkeakouluopiskelija</div>
+                  <div>{profile.educationLevel}</div>
                 </section>
               </IonText>
             </div>

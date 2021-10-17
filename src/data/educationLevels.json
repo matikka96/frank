@@ -1,0 +1,17 @@
+[
+  {
+    "ref": "polytechnic",
+    "fi": "Ammattikorkeakoulu",
+    "eng": "Polytechnic"
+  },
+  {
+    "ref": "university",
+    "fi": "Yliopisto",
+    "eng": "University"
+  },
+  {
+    "ref": "second_degree",
+    "fi": "Lukio tai ammatillinen oppilaitos",
+    "eng": "Second degree"
+  }
+]

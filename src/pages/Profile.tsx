@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useState, useEffect } from "react";
 import {
   IonContent,
   IonPage,
@@ -13,9 +13,12 @@ import {
   IonAvatar,
   IonListHeader,
   IonIcon,
+  useIonActionSheet,
 } from "@ionic/react";
 import { cloudUploadOutline } from "ionicons/icons";
 import "./Profile.css";
+import Schools from "../data/schools.json";
+import educationLevels from "../data/educationLevels.json";
 
 interface Props {
   profile: any;
@@ -23,6 +26,16 @@ interface Props {
 }
 
 export default function Profile({ profile, setProfile }: Props): ReactElement {
+  const [sheetPresent, sheetDismiss] = useIonActionSheet();
+  const [activeSchools, setActiveSchools] = useState<string[]>([]);
+
+  useEffect(() => {
+    const activeEduLvlSchools = getEduLvlSchools(profile.educationLevel);
+    setActiveSchools(activeEduLvlSchools);
+    if (!activeEduLvlSchools.includes(profile.university)) updateProfile("university", "");
+  }, [profile.educationLevel]);
+
+  // const updateProfile = (key: string, value: string | number) => {
   const updateProfile = (key: string, value: string | number) => {
     const updatedProfile = JSON.parse(JSON.stringify(profile));
     updatedProfile[key] = value;
@@ -39,6 +52,19 @@ export default function Profile({ profile, setProfile }: Props): ReactElement {
       };
       reader.readAsDataURL(file);
     }
+  };
+
+  const getEduLvlSchools = (eduLvl: string) => {
+    if (eduLvl && Schools) {
+      const schoolLvl = educationLevels.find((lvl) => lvl.fi === eduLvl);
+      if (schoolLvl) {
+        const index = Object.keys(Schools).indexOf(schoolLvl.ref);
+        if (index !== -1) {
+          const eduLvlSchools = Object.values(Schools)[index];
+          return eduLvlSchools.map((school) => school.name);
+        } else return [];
+      } else return [];
+    } else return [];
   };
 
   return (
@@ -67,6 +93,7 @@ export default function Profile({ profile, setProfile }: Props): ReactElement {
                 onChange={(e) => loadPicture(e)}
               />
             </IonAvatar>
+            <i>Kuvan koko ei saa ylittää 5MB</i>
           </label>
         </div>
 
@@ -77,21 +104,25 @@ export default function Profile({ profile, setProfile }: Props): ReactElement {
           <IonItem>
             <IonLabel position="stacked">Etunimi</IonLabel>
             <IonInput
-              placeholder="Matti"
               value={profile.firstName}
               onIonChange={(e) => updateProfile("firstName", e.detail.value!)}></IonInput>
           </IonItem>
           <IonItem>
             <IonLabel position="stacked">Sukunimi</IonLabel>
             <IonInput
-              placeholder="Meikäläinen"
               value={profile.lastName}
               onIonChange={(e) => updateProfile("lastName", e.detail.value!)}></IonInput>
           </IonItem>
           <IonItem>
+            <IonLabel position="stacked">Opiskelijanumero</IonLabel>
+            <IonInput
+              type="number"
+              value={profile.studentNumber}
+              onIonChange={(e) => updateProfile("studentNumber", e.detail.value!)}></IonInput>
+          </IonItem>
+          <IonItem>
             <IonLabel position="stacked">Syntymäpäivä</IonLabel>
             <IonDatetime
-              placeholder="1990 01 01"
               displayFormat="YYYY MM DD"
               min={(new Date().getFullYear() - 80).toString()}
               max={(new Date().getFullYear() - 15).toString()}
@@ -100,20 +131,52 @@ export default function Profile({ profile, setProfile }: Props): ReactElement {
                 updateProfile("birthDate", e.detail.value!.split("T")[0])
               }></IonDatetime>
           </IonItem>
-          <IonItem>
-            <IonLabel position="stacked">Opiskelijanumero</IonLabel>
-            <IonInput
-              placeholder="1000000"
-              type="number"
-              value={profile.studentNumber}
-              onIonChange={(e) => updateProfile("studentNumber", e.detail.value!)}></IonInput>
+
+          <IonItem
+            onClick={() =>
+              sheetPresent({
+                header: "Koulutusaste",
+                buttons: educationLevels
+                  .map((lvl) => ({
+                    text: lvl.fi,
+                    role: profile.educationLevel === lvl.fi ? "selected" : undefined,
+                    handler: () => updateProfile("educationLevel", lvl.fi),
+                  }))
+                  .concat([
+                    {
+                      text: "Peruuta",
+                      role: "cancel",
+                      handler: () => sheetDismiss,
+                    },
+                  ]),
+              })
+            }>
+            <IonLabel position="stacked">Koulutusaste</IonLabel>
+            <IonInput value={profile.educationLevel} readonly></IonInput>
           </IonItem>
-          <IonItem>
-            <IonLabel position="stacked">Yliopisto</IonLabel>
-            <IonInput
-              placeholder="LUT-Yliopisto"
-              value={profile.university}
-              onIonChange={(e) => updateProfile("university", e.detail.value!)}></IonInput>
+
+          <IonItem
+            disabled={activeSchools.length === 0 ? true : false}
+            onClick={() =>
+              sheetPresent({
+                header: "Koulu",
+                buttons: activeSchools
+                  .map((school) => ({
+                    text: school,
+                    role: profile.university === school ? "selected" : undefined,
+                    handler: () => updateProfile("university", school),
+                  }))
+                  .concat([
+                    {
+                      text: "Peruuta",
+                      role: "cancel",
+                      handler: () => sheetDismiss,
+                    },
+                  ]),
+              })
+            }>
+            <IonLabel position="stacked">Koulu</IonLabel>
+            <IonInput value={profile.university} readonly></IonInput>
           </IonItem>
         </IonList>
       </IonContent>

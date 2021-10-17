@@ -1,0 +1,344 @@
+{
+  "polytechnic": [
+    {
+      "name": "Centria-ammattikorkeakoulu",
+      "localizedName": {
+        "en": "Centria University of Applied Sciences",
+        "fi": "Centria-ammattikorkeakoulu",
+        "sv": "Centria-ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Diakonia-ammattikorkeakoulu",
+      "localizedName": {
+        "en": "Diaconia University of Applied Sciences",
+        "fi": "Diakonia-ammattikorkeakoulu",
+        "sv": "Diakonia-ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Haaga-Helia ammattikorkeakoulu",
+      "localizedName": {
+        "en": "Haaga-Helia ammattikorkeakoulu",
+        "fi": "Haaga-Helia ammattikorkeakoulu",
+        "sv": "Haaga-Helia ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Humanistinen ammattikorkeakoulu",
+      "localizedName": {
+        "en": "Humak University of Applied Sciences",
+        "fi": "Humanistinen ammattikorkeakoulu",
+        "sv": "Humanistinen ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Hämeen ammattikorkeakoulu",
+      "localizedName": {
+        "en": "Häme University of Applied Sciences",
+        "fi": "Hämeen ammattikorkeakoulu",
+        "sv": "Hämeen ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Högskolan på Åland",
+      "localizedName": {
+        "en": "Högskolan på Åland",
+        "fi": "Högskolan på Åland",
+        "sv": "Högskolan på Åland"
+      }
+    },
+    {
+      "name": "Jyväskylän ammattikorkeakoulu",
+      "localizedName": {
+        "en": "JAMK University of Applied Sciences",
+        "fi": "Jyväskylän ammattikorkeakoulu",
+        "sv": "Jyväskylän ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Kaakkois-Suomen ammattikorkeakoulu",
+      "localizedName": {
+        "en": "South-Eastern Finland University of Applied Sciences",
+        "fi": "Kaakkois-Suomen ammattikorkeakoulu",
+        "sv": "Kaakkois-Suomen ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Kajaanin ammattikorkeakoulu",
+      "localizedName": {
+        "en": "Kajaani University of Applied Sciences",
+        "fi": "Kajaanin ammattikorkeakoulu",
+        "sv": "Kajaanin ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Karelia-ammattikorkeakoulu",
+      "localizedName": {
+        "en": "Karelia University of Applied Sciences",
+        "fi": "Karelia-ammattikorkeakoulu",
+        "sv": "Karelia-ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "LAB-ammattikorkeakoulu",
+      "localizedName": {
+        "en": "LAB University of Applied Sciences",
+        "fi": "LAB-ammattikorkeakoulu",
+        "sv": "LAB-ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Lahden ammattikorkeakoulu",
+      "localizedName": {
+        "en": "Lahti University of Applied Sciences",
+        "fi": "Lahden ammattikorkeakoulu",
+        "sv": "Lahden ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Lapin ammattikorkeakoulu",
+      "localizedName": {
+        "en": "Lapin ammattikorkeakoulu",
+        "fi": "Lapin ammattikorkeakoulu",
+        "sv": "Lapin ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Laurea-ammattikorkeakoulu",
+      "localizedName": {
+        "en": "Laurea University of Applied Sciences",
+        "fi": "Laurea-ammattikorkeakoulu",
+        "sv": "Laurea-ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Metropolia Ammattikorkeakoulu",
+      "localizedName": {
+        "en": "Metropolia Ammattikorkeakoulu",
+        "fi": "Metropolia Ammattikorkeakoulu",
+        "sv": "Metropolia Ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Oulun ammattikorkeakoulu",
+      "localizedName": {
+        "en": "Oulu University of Applied Sciences",
+        "fi": "Oulun ammattikorkeakoulu",
+        "sv": "Oulun ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Poliisiammattikorkeakoulu",
+      "localizedName": {
+        "en": "Poliisiammattikorkeakoulu",
+        "fi": "Poliisiammattikorkeakoulu",
+        "sv": "Poliisiammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Saimaan ammattikorkeakoulu",
+      "localizedName": {
+        "en": "Saimaa University of Applied Sciences",
+        "fi": "Saimaan ammattikorkeakoulu",
+        "sv": "Saimaan ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Satakunnan ammattikorkeakoulu",
+      "localizedName": {
+        "en": "Satakunta University of Applied Sciences SAMK",
+        "fi": "Satakunnan ammattikorkeakoulu",
+        "sv": "Satakunnan ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Savonia-ammattikorkeakoulu",
+      "localizedName": {
+        "en": "Savonia University of Applied Sciences",
+        "fi": "Savonia-ammattikorkeakoulu",
+        "sv": "Savonia-ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Seinäjoen ammattikorkeakoulu",
+      "localizedName": {
+        "en": "Seinäjoki University of Applied Sciences",
+        "fi": "Seinäjoen ammattikorkeakoulu",
+        "sv": "Seinäjoen ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Tampereen ammattikorkeakoulu",
+      "localizedName": {
+        "en": "Tampere University of Applied Sciences",
+        "fi": "Tampereen ammattikorkeakoulu",
+        "sv": "Tampereen ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Turun ammattikorkeakoulu",
+      "localizedName": {
+        "en": "Turku University of Applied Sciences",
+        "fi": "Turun ammattikorkeakoulu",
+        "sv": "Turun ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Vaasan ammattikorkeakoulu",
+      "localizedName": {
+        "en": "Vaasa University of Applied Sciences",
+        "fi": "Vaasan ammattikorkeakoulu",
+        "sv": "Vaasan ammattikorkeakoulu"
+      }
+    },
+    {
+      "name": "Yrkeshögskolan Arcada",
+      "localizedName": {
+        "en": "Arcada University of Applied Sciences",
+        "fi": "Yrkeshögskolan Arcada",
+        "sv": "Yrkeshögskolan Arcada"
+      }
+    },
+    {
+      "name": "Yrkeshögskolan Novia",
+      "localizedName": {
+        "en": "Yrkeshögskolan Novia",
+        "fi": "Yrkeshögskolan Novia",
+        "sv": "Yrkeshögskolan Novia"
+      }
+    }
+  ],
+  "university": [
+    {
+      "name": "Aalto-yliopisto",
+      "localizedName": {
+        "en": "Aalto University",
+        "fi": "Aalto-yliopisto",
+        "sv": "Aalto-universitetet"
+      }
+    },
+    {
+      "name": "Helsingin yliopisto",
+      "localizedName": {
+        "en": "University of Helsinki",
+        "fi": "Helsingin yliopisto",
+        "sv": "Helsingfors universitet"
+      }
+    },
+    {
+      "name": "Itä-Suomen yliopisto",
+      "localizedName": {
+        "en": "University of Eastern Finland",
+        "fi": "Itä-Suomen yliopisto",
+        "sv": "Östra Finlands Universitet"
+      }
+    },
+    {
+      "name": "Jyväskylän yliopisto",
+      "localizedName": {
+        "en": "University of Jyväskylä",
+        "fi": "Jyväskylän yliopisto",
+        "sv": "Jyväskylän yliopisto"
+      }
+    },
+    {
+      "name": "Lapin yliopisto",
+      "localizedName": {
+        "en": "University of Lapland",
+        "fi": "Lapin yliopisto",
+        "sv": "Lapin yliopisto"
+      }
+    },
+    {
+      "name": "Lappeenrannan–Lahden teknillinen yliopisto",
+      "localizedName": {
+        "en": "Lappeenrannan–Lahden teknillinen yliopisto",
+        "fi": "Lappeenrannan–Lahden teknillinen yliopisto",
+        "sv": "Lappeenrannan–Lahden teknillinen yliopisto"
+      }
+    },
+    {
+      "name": "Oulun yliopisto",
+      "localizedName": {
+        "en": "University of Oulu",
+        "fi": "Oulun yliopisto",
+        "sv": "Oulun yliopisto"
+      }
+    },
+    {
+      "name": "Svenska handelshögskolan",
+      "localizedName": {
+        "en": "Hanken School of Economics",
+        "fi": "Svenska handelshögskolan",
+        "sv": "Svenska handelshögskolan"
+      }
+    },
+    {
+      "name": "Taideyliopisto",
+      "localizedName": {
+        "en": "Taideyliopisto",
+        "fi": "Taideyliopisto",
+        "sv": "Taideyliopisto"
+      }
+    },
+    {
+      "name": "Tampereen yliopisto",
+      "localizedName": {
+        "en": "University of Tampere",
+        "fi": "Tampereen yliopisto",
+        "sv": "Tampereen yliopisto"
+      }
+    },
+    {
+      "name": "Turun yliopisto",
+      "localizedName": {
+        "en": "Turun yliopisto",
+        "fi": "Turun yliopisto",
+        "sv": "Turun yliopisto"
+      }
+    },
+    {
+      "name": "Vaasan yliopisto",
+      "localizedName": {
+        "en": "University of Vaasa",
+        "fi": "Vaasan yliopisto",
+        "sv": "Vasa universitet"
+      }
+    },
+    {
+      "name": "Åbo Akademi",
+      "localizedName": {
+        "en": "Åbo Akademi University",
+        "fi": "Åbo Akademi",
+        "sv": "Åbo Akademi"
+      }
+    }
+  ],
+  "second_degree": [
+    {
+      "name": "Ammatillinen oppilaitos (SAKKI)",
+      "localizedName": {
+        "en": "Ammatillinen oppilaitos (SAKKI)",
+        "fi": "Ammatillinen oppilaitos (SAKKI)",
+        "sv": "Ammatillinen oppilaitos (SAKKI)"
+      }
+    },
+    {
+      "name": "Finlands Svenska Skolungdomsförbund (FSS)",
+      "localizedName": {
+        "en": "Finlands Svenska Skolungdomsförbund (FSS)",
+        "fi": "Finlands Svenska Skolungdomsförbund (FSS)",
+        "sv": "Finlands Svenska Skolungdomsförbund (FSS)"
+      }
+    },
+    {
+      "name": "Lukiolaisten liitto (SLL)",
+      "localizedName": {
+        "en": "Lukiolaisten liitto (SLL)",
+        "fi": "Lukiolaisten liitto (SLL)",
+        "sv": "Lukiolaisten liitto (SLL)"
+      }
+    }
+  ]
+}

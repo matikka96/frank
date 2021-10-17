@@ -2,7 +2,7 @@
   "name": "frank",
   "version": "0.0.1",
   "private": true,
-  "homepage": "https://www.matvei.xyz/frank-student-card/",
+  "homepage": "https://www.matvei.xyz/frank/",
   "dependencies": {
     "@capacitor/app": "1.0.5",
     "@capacitor/core": "3.2.5",

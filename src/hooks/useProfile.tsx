@@ -19,6 +19,7 @@ const loadProfile = () => {
       firstName: "",
       lastName: "",
       birthDate: "",
+      educationLevel: "",
       university: "",
       studentNumber: null,
       picture: "",
