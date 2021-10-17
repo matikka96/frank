@@ -2,9 +2,9 @@
   "files": {
     "static/js/0.00532a61.chunk.js": "/frank-student-card/static/js/0.00532a61.chunk.js",
     "static/js/0.00532a61.chunk.js.map": "/frank-student-card/static/js/0.00532a61.chunk.js.map",
-    "main.css": "/frank-student-card/static/css/main.e8404aa7.chunk.css",
-    "main.js": "/frank-student-card/static/js/main.d3459ad0.chunk.js",
-    "main.js.map": "/frank-student-card/static/js/main.d3459ad0.chunk.js.map",
+    "main.css": "/frank-student-card/static/css/main.5fa762c5.chunk.css",
+    "main.js": "/frank-student-card/static/js/main.c74ae300.chunk.js",
+    "main.js.map": "/frank-student-card/static/js/main.c74ae300.chunk.js.map",
     "polyfills-dom.js": "/frank-student-card/static/js/polyfills-dom.ed24762c.chunk.js",
     "polyfills-dom.js.map": "/frank-student-card/static/js/polyfills-dom.ed24762c.chunk.js.map",
     "runtime-main.js": "/frank-student-card/static/js/runtime-main.91ecdb92.js",
@@ -124,7 +124,7 @@
     "service-worker.js": "/frank-student-card/service-worker.js",
     "service-worker.js.map": "/frank-student-card/service-worker.js.map",
     "static/css/4.532f36fa.chunk.css.map": "/frank-student-card/static/css/4.532f36fa.chunk.css.map",
-    "static/css/main.e8404aa7.chunk.css.map": "/frank-student-card/static/css/main.e8404aa7.chunk.css.map",
+    "static/css/main.5fa762c5.chunk.css.map": "/frank-student-card/static/css/main.5fa762c5.chunk.css.map",
     "static/js/4.f35ec20b.chunk.js.LICENSE.txt": "/frank-student-card/static/js/4.f35ec20b.chunk.js.LICENSE.txt",
     "static/js/52.5c22eeb3.chunk.js.LICENSE.txt": "/frank-student-card/static/js/52.5c22eeb3.chunk.js.LICENSE.txt",
     "static/js/polyfills-dom.ed24762c.chunk.js.LICENSE.txt": "/frank-student-card/static/js/polyfills-dom.ed24762c.chunk.js.LICENSE.txt",
@@ -134,7 +134,7 @@
     "static/js/runtime-main.91ecdb92.js",
     "static/css/4.532f36fa.chunk.css",
     "static/js/4.f35ec20b.chunk.js",
-    "static/css/main.e8404aa7.chunk.css",
-    "static/js/main.d3459ad0.chunk.js"
+    "static/css/main.5fa762c5.chunk.css",
+    "static/js/main.c74ae300.chunk.js"
   ]
 }
