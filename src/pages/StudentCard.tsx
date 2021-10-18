@@ -71,6 +71,7 @@ export default function StudentCard({ profile }: Props) {
                 </section>
                 <section className="pt-1">
                   <div>{profile.educationLevel}</div>
+                  <div>{profile.studentNumber}</div>
                 </section>
               </IonText>
             </div>

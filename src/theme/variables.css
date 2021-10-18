@@ -15,12 +15,12 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-primary-tint: hsla(341, 77%, 68%, 1);
 
   /** secondary **/
-  --ion-color-secondary: hsla(219, 62%, 56%, 1);
+  --ion-color-secondary: hsla(217, 63%, 60%, 1);
   --ion-color-secondary-rgb: 61, 194, 255;
   --ion-color-secondary-contrast: #ffffff;
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
-  --ion-color-secondary-shade: hsla(219, 62%, 66%, 1);
-  --ion-color-secondary-tint: hsla(219, 62%, 66%, 1);
+  --ion-color-secondary-shade: hsla(217, 63%, 50%, 1);
+  --ion-color-secondary-tint: hsla(217, 63%, 50%, 1);
 
   /** tertiary **/
   --ion-color-tertiary: #5260ff;
