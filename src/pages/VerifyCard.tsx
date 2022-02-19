@@ -1,12 +1,5 @@
 import React, { ReactElement } from "react";
-import {
-  IonContent,
-  IonHeader,
-  IonToolbar,
-  IonPage,
-  IonButtons,
-  IonBackButton,
-} from "@ionic/react";
+import { IonContent, IonHeader, IonToolbar, IonPage, IonButtons, IonBackButton } from "@ionic/react";
 import QR from "../qrCode.svg";
 
 interface Props {}
@@ -42,16 +35,13 @@ export default function verifyCard({}: Props): ReactElement {
             </div>
           </div>
           <h1 className="text-center text-30 text-bold">
-            {dateNow.getMonth() < switchMonth ? dateNow.getFullYear() : dateNow.getFullYear() - 1}
+            {dateNow.getMonth() < switchMonth ? dateNow.getFullYear() - 1 : dateNow.getFullYear()}
             {" - "}
-            {dateNow.getMonth() < switchMonth ? dateNow.getFullYear() + 1 : dateNow.getFullYear()}
+            {dateNow.getMonth() < switchMonth ? dateNow.getFullYear() : dateNow.getFullYear() + 1}
           </h1>
           <p className="text-center text-10 color-lightgrey">
             Voimassa 30.09.
-            {dateNow.getMonth() < switchMonth
-              ? dateNow.getFullYear() + 1
-              : dateNow.getFullYear()}{" "}
-            asti
+            {dateNow.getMonth() < switchMonth ? dateNow.getFullYear() : dateNow.getFullYear() + 1} asti
           </p>
         </div>
       </IonContent>

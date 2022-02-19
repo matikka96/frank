@@ -1,8 +1,9 @@
-export default interface profile {
+export default interface Profile {
   firstName: string;
   lastName: string;
   birthDate: string;
+  educationLevel: string;
   university: string;
-  studentNumber: number | null;
+  studentNumber: string;
   picture: string;
 }

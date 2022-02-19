@@ -16,16 +16,18 @@ import {
   useIonActionSheet,
 } from "@ionic/react";
 import { cloudUploadOutline } from "ionicons/icons";
+import Schools from "../assets/data/schools.json";
+import educationLevels from "../assets/data/educationLevels.json";
 import "./Profile.css";
-import Schools from "../data/schools.json";
-import educationLevels from "../data/educationLevels.json";
+import Compressor from "compressorjs";
+import Profile from "../types/profile"
 
 interface Props {
-  profile: any;
-  setProfile: (newProfile: any) => void;
+  profile: Profile;
+  setProfile: (newProfile: Profile) => void;
 }
 
-export default function Profile({ profile, setProfile }: Props): ReactElement {
+export default function ProfilePage({ profile, setProfile }: Props): ReactElement {
   const [sheetPresent, sheetDismiss] = useIonActionSheet();
   const [activeSchools, setActiveSchools] = useState<string[]>([]);
 
@@ -35,7 +37,6 @@ export default function Profile({ profile, setProfile }: Props): ReactElement {
     if (!activeEduLvlSchools.includes(profile.university)) updateProfile("university", "");
   }, [profile.educationLevel]);
 
-  // const updateProfile = (key: string, value: string | number) => {
   const updateProfile = (key: string, value: string | number) => {
     const updatedProfile = JSON.parse(JSON.stringify(profile));
     updatedProfile[key] = value;
@@ -45,12 +46,17 @@ export default function Profile({ profile, setProfile }: Props): ReactElement {
   const loadPicture = (event: any) => {
     if (event.target.files && event.target.files[0]) {
       const file = event.target.files[0];
-      const reader = new FileReader();
-      reader.onloadend = function () {
-        const uploadedPicture = reader.result?.toString();
-        if (uploadedPicture) updateProfile("picture", uploadedPicture);
-      };
-      reader.readAsDataURL(file);
+      new Compressor(file, {
+        quality: 0.5,
+        success: (compressedResult) => {
+          let reader = new FileReader();
+          reader.readAsDataURL(compressedResult);
+          reader.onloadend = () => {
+            let base64data = reader.result;
+            if (base64data) updateProfile("picture", base64data.toString());
+          };
+        },
+      });
     }
   };
 
@@ -70,8 +76,8 @@ export default function Profile({ profile, setProfile }: Props): ReactElement {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar color="dark">
-          <IonTitle>Profiili</IonTitle>
+        <IonToolbar color="secondary">
+          <IonTitle className="text-10 text-regular">Profiili</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
@@ -80,12 +86,12 @@ export default function Profile({ profile, setProfile }: Props): ReactElement {
             <IonAvatar
               slot="center"
               className="m-2 bg-grey"
-              style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-              {profile.picture ? (
-                <img src={profile.picture} />
-              ) : (
-                <IonIcon size="large" icon={cloudUploadOutline} />
-              )}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}>
+              {profile.picture ? <img src={profile.picture} /> : <IonIcon size="large" icon={cloudUploadOutline} />}
               <input
                 type="file"
                 style={{ display: "none" }}
@@ -93,11 +99,10 @@ export default function Profile({ profile, setProfile }: Props): ReactElement {
                 onChange={(e) => loadPicture(e)}
               />
             </IonAvatar>
-            <i>Kuvan koko ei saa ylittää 5MB</i>
           </label>
         </div>
 
-        <IonList>
+        <IonList className="mb-1">
           <IonListHeader>
             <IonLabel>Opiskelijan tiedot</IonLabel>
           </IonListHeader>
@@ -127,9 +132,7 @@ export default function Profile({ profile, setProfile }: Props): ReactElement {
               min={(new Date().getFullYear() - 80).toString()}
               max={(new Date().getFullYear() - 15).toString()}
               value={profile.birthDate}
-              onIonChange={(e) =>
-                updateProfile("birthDate", e.detail.value!.split("T")[0])
-              }></IonDatetime>
+              onIonChange={(e) => updateProfile("birthDate", e.detail.value!.split("T")[0])}></IonDatetime>
           </IonItem>
 
           <IonItem

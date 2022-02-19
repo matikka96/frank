@@ -1,3 +1,9 @@
+/* Variables */
+:root {
+  --sizing-1: 1rem;
+  --sizing-2: 1.75rem;
+}
+
 /* Text */
 * {
   font-family: "Montserrat";
@@ -26,6 +32,11 @@
 .text-upper-capitalize {
   text-transform: capitalize;
 }
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 /* Margin & padding */
 .container {
@@ -33,64 +44,91 @@
   margin: 0 auto;
 }
 .p-1 {
-  padding: 1rem;
+  padding: var(--sizing-1);
 }
 .p-2 {
-  padding: 1.75rem;
+  padding: var(--sizing-2);
 }
 .px-1 {
-  padding: 0 1rem;
+  padding: 0 var(--sizing-1);
 }
 .px-2 {
-  padding: 0 1.75rem;
+  padding: 0 var(--sizing-2);
 }
 .pb-1 {
-  padding-bottom: 1rem;
+  padding-bottom: var(--sizing-1);
 }
 .pb-2 {
-  padding-bottom: 1.75rem;
+  padding-bottom: var(--sizing-2);
 }
 .pt-1 {
-  padding-top: 1rem;
+  padding-top: var(--sizing-1);
 }
 .pt-2 {
-  padding-top: 1.75rem;
+  padding-top: var(--sizing-2);
 }
 .pb-1 {
-  padding-bottom: 1rem;
+  padding-bottom: var(--sizing-1);
 }
 .pb-2 {
-  padding-bottom: 1.75rem;
+  padding-bottom: var(--sizing-2);
 }
+
 .m-1 {
-  margin: 1rem;
+  margin: var(--sizing-1);
 }
 .m-2 {
-  margin: 1.75rem;
+  margin: var(--sizing-2);
 }
 .mx-1 {
-  margin: 0 1rem;
+  margin: 0 var(--sizing-1);
 }
 .mx-2 {
-  margin: 0 1.75rem;
+  margin: 0 var(--sizing-2);
 }
 .mb-1 {
-  margin-bottom: 1rem;
+  margin-bottom: var(--sizing-1);
 }
 .mb-2 {
-  margin-bottom: 1.75rem;
+  margin-bottom: var(--sizing-2);
 }
 .mt-1 {
-  margin-top: 1rem;
+  margin-top: var(--sizing-1);
 }
 .mt-2 {
-  margin-top: 1.75rem;
+  margin-top: var(--sizing-2);
 }
 .mb-1 {
-  margin-bottom: 1rem;
+  margin-bottom: var(--sizing-1);
 }
 .mb-2 {
-  margin-bottom: 1.75rem;
+  margin-bottom: var(--sizing-2);
+}
+.ml-1 {
+  margin-left: var(--sizing-1);
+}
+.ml-2 {
+  margin-left: var(--sizing-2);
+}
+.mr-1 {
+  margin-right: var(--sizing-1);
+}
+.mr-2 {
+  margin-right: var(--sizing-2);
+}
+
+/* Display and position */
+.flex {
+  display: flex;
+}
+.flex-no-wrap {
+  flex-wrap: nowrap;
+}
+.space-between {
+  justify-content: space-between;
+}
+.thumbnail {
+  height: 3rem;
 }
 
 /* Border */
@@ -106,6 +144,6 @@
   background-color: lightgrey;
 }
 .color-lightgrey {
-  color: #FAFFFF;
+  color: #faffff;
   /* color: lightgrey; */
 }

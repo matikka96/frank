@@ -2,29 +2,34 @@ import { useEffect, useState } from "react";
 import Profile from "../types/profile";
 
 const useProfile = () => {
-  const [profile, setProfile] = useState<any>(() => loadProfile());
+  const [profile, setProfile] = useState(() => loadProfile());
 
   useEffect(() => {
-    localStorage.setItem("frank-profile", JSON.stringify(profile));
+    try {
+      localStorage.setItem("frank-profile", JSON.stringify(profile));
+    } catch (e) {
+      console.log(e);
+      alert("Tietoja ei voitu tallentaa");
+    }
   }, [profile]);
 
-  return [profile, setProfile];
+  return [profile, setProfile] as const;
 };
 
 const loadProfile = () => {
-  const savedProfile = localStorage.getItem("frank-profile");
-  if (savedProfile) return JSON.parse(savedProfile);
+  const parsedProfile = localStorage.getItem("frank-profile");
+  if (parsedProfile) return JSON.parse(parsedProfile) as Profile;
   else {
-    const newProfile = {
+    const blankProfile: Profile = {
       firstName: "",
       lastName: "",
       birthDate: "",
       educationLevel: "",
       university: "",
-      studentNumber: null,
+      studentNumber: "",
       picture: "",
     };
-    return newProfile;
+    return blankProfile;
   }
 };
 

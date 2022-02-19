@@ -12,13 +12,17 @@ import {
   IonHeader,
   IonToolbar,
   IonTitle,
+  IonThumbnail,
+  useIonRouter,
 } from "@ionic/react";
-import { useIonRouter } from "@ionic/react";
 import { barcodeOutline, checkmarkOutline } from "ionicons/icons";
 import "./StudentCard.css";
+import sylLogo from "../assets/img/syl-logo.png";
+import ythsLogo from "../assets/img/yths-logo.png";
+import Profile from "../types/profile";
 
 interface Props {
-  profile?: any;
+  profile: Profile;
 }
 
 export default function StudentCard({ profile }: Props) {
@@ -32,7 +36,7 @@ export default function StudentCard({ profile }: Props) {
     <IonPage>
       <IonHeader className="ion-no-border">
         <IonToolbar mode="ios" color="secondary">
-          <IonTitle className="text-10 text-regular ">OPISKELIJAKORTTI</IonTitle>
+          <IonTitle className="text-10 text-regular">OPISKELIJAKORTTI</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen color="secondary">
@@ -47,10 +51,7 @@ export default function StudentCard({ profile }: Props) {
                     backgroundSize: "cover",
                     backgroundPosition: "center center",
                   }}></div>
-                <IonFabButton
-                  className="student-card-icon-left"
-                  style={{ pointerEvents: "none" }}
-                  color="light">
+                <IonFabButton className="student-card-icon-left" style={{ pointerEvents: "none" }} color="light">
                   <IonIcon size="large" icon={barcodeOutline} />
                 </IonFabButton>
                 <IonFabButton
@@ -64,13 +65,26 @@ export default function StudentCard({ profile }: Props) {
                 <section className="pt-1">
                   <div className="text-15 text-upper-capitalize">{profile.firstName}</div>
                   <div className="text-15 text-upper-capitalize">{profile.lastName}</div>
-                  <div>{profile.birthDate.split("-").join(".")}</div>
+                  <div>{profile.birthDate.split("-").reverse().join(".")}</div>
+                </section>
+                <section className="pt-1 flex space-between">
+                  <div className="text-upper-capitalize truncate">{profile.university}</div>
+                  <div className="flex flex-no-wrap">
+                    <IonThumbnail>
+                      <img src={sylLogo} alt="SYL logo" className="thumbnail" />
+                    </IonThumbnail>
+                    <IonThumbnail style={{ marginLeft: "0.25rem" }}>
+                      <img src={ythsLogo} alt="SYL logo" className="thumbnail" />
+                    </IonThumbnail>
+                  </div>
                 </section>
                 <section className="pt-1">
-                  <div className="text-upper-capitalize">{profile.university}</div>
-                </section>
-                <section className="pt-1">
-                  <div>{profile.educationLevel}</div>
+                  {/* Looks like it's should say 'Korkeakouluopiskelija' for AMK & University */}
+                  <div>
+                    {profile.educationLevel == "Yliopisto" || profile.educationLevel == "Ammattikorkeakoulu"
+                      ? "Korkeakouluopiskelija"
+                      : profile.educationLevel}
+                  </div>
                   <div>{profile.studentNumber}</div>
                 </section>
               </IonText>
@@ -79,9 +93,7 @@ export default function StudentCard({ profile }: Props) {
         ) : (
           <IonCard>
             <IonCardHeader>
-              <IonCardSubtitle>
-                Syötä omat tiedot niin opiskelijakorttisi tulee näkyviin
-              </IonCardSubtitle>
+              <IonCardSubtitle>Syötä omat tiedot niin opiskelijakorttisi tulee näkyviin</IonCardSubtitle>
             </IonCardHeader>
             <IonCardContent>
               <IonButton onClick={() => router.push("/profile")}>Syötä tiedot</IonButton>

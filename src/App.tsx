@@ -9,7 +9,7 @@ import {
   pricetagOutline,
 } from "ionicons/icons";
 import StudentCard from "./pages/StudentCard";
-import Profile from "./pages/Profile";
+import Profile from "./pages/ProfilePage";
 import VerifyCard from "./pages/VerifyCard";
 import useProfile from "./hooks/useProfile";
 
