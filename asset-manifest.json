@@ -2,16 +2,16 @@
   "files": {
     "static/js/0.390f4368.chunk.js": "/frank/static/js/0.390f4368.chunk.js",
     "static/js/0.390f4368.chunk.js.map": "/frank/static/js/0.390f4368.chunk.js.map",
-    "main.css": "/frank/static/css/main.ab09387d.chunk.css",
-    "main.js": "/frank/static/js/main.e0086068.chunk.js",
-    "main.js.map": "/frank/static/js/main.e0086068.chunk.js.map",
+    "main.css": "/frank/static/css/main.d06b9f9c.chunk.css",
+    "main.js": "/frank/static/js/main.70403b9f.chunk.js",
+    "main.js.map": "/frank/static/js/main.70403b9f.chunk.js.map",
     "polyfills-dom.js": "/frank/static/js/polyfills-dom.36baedba.chunk.js",
     "polyfills-dom.js.map": "/frank/static/js/polyfills-dom.36baedba.chunk.js.map",
     "runtime-main.js": "/frank/static/js/runtime-main.80e33519.js",
     "runtime-main.js.map": "/frank/static/js/runtime-main.80e33519.js.map",
     "static/css/4.532f36fa.chunk.css": "/frank/static/css/4.532f36fa.chunk.css",
-    "static/js/4.f1839d0b.chunk.js": "/frank/static/js/4.f1839d0b.chunk.js",
-    "static/js/4.f1839d0b.chunk.js.map": "/frank/static/js/4.f1839d0b.chunk.js.map",
+    "static/js/4.70bd4dcb.chunk.js": "/frank/static/js/4.70bd4dcb.chunk.js",
+    "static/js/4.70bd4dcb.chunk.js.map": "/frank/static/js/4.70bd4dcb.chunk.js.map",
     "static/js/5.4aa8b35b.chunk.js": "/frank/static/js/5.4aa8b35b.chunk.js",
     "static/js/5.4aa8b35b.chunk.js.map": "/frank/static/js/5.4aa8b35b.chunk.js.map",
     "static/js/6.78833c96.chunk.js": "/frank/static/js/6.78833c96.chunk.js",
@@ -124,17 +124,18 @@
     "service-worker.js": "/frank/service-worker.js",
     "service-worker.js.map": "/frank/service-worker.js.map",
     "static/css/4.532f36fa.chunk.css.map": "/frank/static/css/4.532f36fa.chunk.css.map",
-    "static/css/main.ab09387d.chunk.css.map": "/frank/static/css/main.ab09387d.chunk.css.map",
-    "static/js/4.f1839d0b.chunk.js.LICENSE.txt": "/frank/static/js/4.f1839d0b.chunk.js.LICENSE.txt",
+    "static/css/main.d06b9f9c.chunk.css.map": "/frank/static/css/main.d06b9f9c.chunk.css.map",
+    "static/js/4.70bd4dcb.chunk.js.LICENSE.txt": "/frank/static/js/4.70bd4dcb.chunk.js.LICENSE.txt",
     "static/js/52.df0c1763.chunk.js.LICENSE.txt": "/frank/static/js/52.df0c1763.chunk.js.LICENSE.txt",
     "static/js/polyfills-dom.36baedba.chunk.js.LICENSE.txt": "/frank/static/js/polyfills-dom.36baedba.chunk.js.LICENSE.txt",
-    "static/media/qrCode.150aed4b.svg": "/frank/static/media/qrCode.150aed4b.svg"
+    "static/media/qrCode.150aed4b.svg": "/frank/static/media/qrCode.150aed4b.svg",
+    "static/media/syl-logo.16e006a3.png": "/frank/static/media/syl-logo.16e006a3.png"
   },
   "entrypoints": [
     "static/js/runtime-main.80e33519.js",
     "static/css/4.532f36fa.chunk.css",
-    "static/js/4.f1839d0b.chunk.js",
-    "static/css/main.ab09387d.chunk.css",
-    "static/js/main.e0086068.chunk.js"
+    "static/js/4.70bd4dcb.chunk.js",
+    "static/css/main.d06b9f9c.chunk.css",
+    "static/js/main.70403b9f.chunk.js"
   ]
 }
